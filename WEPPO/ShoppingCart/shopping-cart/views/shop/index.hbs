@@ -1,0 +1,19 @@
+{{#each products}}
+  <div class="row justify-content-center">
+    {{#each this}}
+      <div class="card" style="width: 18rem;">
+        <img src={{this.imagePath}} alt="..." />
+        <div class="card-body">
+          <div class="info">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.description}}</p>
+          </div>
+          <div>
+            <div class="price float-start">${{this.price}}</div>
+            <a href="#" class="btn btn-primary float-end">Add to basket</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/each}}
