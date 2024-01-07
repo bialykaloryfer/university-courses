@@ -1,0 +1,21 @@
+.card {
+    margin: 1%;
+}
+.card img {
+    align-self: center;
+    width: 70%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.info {
+    min-height: 80%;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.signup {
+    margin-top: 10%;
+}
