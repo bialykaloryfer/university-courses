@@ -48,9 +48,11 @@ async function seedProducts() {
             await products[i].save();
         }
         console.log('All products saved successfully');
-    } catch (err) {
+    } 
+    catch (err) {
         console.error('Error saving products:', err);
-    } finally {
+    } 
+    finally {
         mongoose.disconnect();
     }
 }

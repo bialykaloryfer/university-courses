@@ -1,0 +1,35 @@
+{{#if orders}}
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2>My Orders</h2>
+      {{#each orders}}
+        <div class="card mb-3">
+          <div class="card-body">
+            <ul class="list-group">
+              {{#each this.items}}
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <strong>{{this.item.title}}</strong>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <span class="badge bg-success">${{this.price}}</span>
+                      <span class="badge bg-secondary">{{this.quantity}}</span>
+                    </div>
+                  </div>
+                </li>
+              {{/each}}
+            </ul>
+            <p class="card-text mt-3"><strong>Price: ${{this.cart.totalPrice}}</strong></p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+{{else}}
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h2>No orders available</h2>
+    </div>
+  </div>
+{{/if}}
